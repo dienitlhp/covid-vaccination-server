@@ -21,4 +21,4 @@ app.post('/', (req, res) => {
   res.send('OK');
 })
 
-app.listen(PORT, () => console.log(`Server running on port: ${PORT}`));
+app.listen(process.env.PORT || 3000);
