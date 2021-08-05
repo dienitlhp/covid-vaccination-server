@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const PORT = 8000;
+const PORT = process.env.PORT;
 const data = require('./data.json')
 
 const fs = require('fs')
@@ -21,4 +21,4 @@ app.post('/', (req, res) => {
   res.send('OK');
 })
 
-app.listen(process.env.PORT || 3000);
+app.listen(PORT || 8000);
